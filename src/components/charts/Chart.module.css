@@ -1,0 +1,8 @@
+.container{
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    background: #fafafa;
+    padding:20px;
+    border-radius: 4px;
+} 
