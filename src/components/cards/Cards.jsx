@@ -5,14 +5,14 @@ import CountUp from 'react-countup';
 import cn from 'classnames';
 
 const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) =>{
-    console.log(confirmed);
+    // console.log(confirmed);
     if(!confirmed){
         return 'Loading...';
     }
     return(
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
-                <Grid item component={Card} xs={12} md={3} className={cn(styles.card, styles.infected)}>
+                <Grid item component={Card} xs={10} md={3} className={cn(styles.card, styles.infected)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom> Infected</Typography>
                         <Typography variant="h5">
@@ -23,7 +23,7 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) =>{
                     </CardContent>
                 </Grid>
 
-                <Grid item component={Card} xs={12} md={3} className={cn(styles.card, styles.recovered)}>
+                <Grid item component={Card} xs={10} md={3} className={cn(styles.card, styles.recovered)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom> Recovered</Typography>
     <Typography variant="h5"> <CountUp start={0} end={recovered.value} duration={2.5} seperator=","/></Typography>
@@ -32,7 +32,7 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) =>{
                     </CardContent>
                 </Grid>
 
-                <Grid item component={Card} xs={12} md={3} className={cn(styles.card, styles.deaths)}>
+                <Grid item component={Card} xs={10} md={3} className={cn(styles.card, styles.deaths)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom> Deaths </Typography>
                         <Typography variant="h5"> 
