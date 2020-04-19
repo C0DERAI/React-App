@@ -1,0 +1,14 @@
+
+.links{
+    float: right;
+}
+.linkBtn{
+    padding: 6px;
+    font-size: 1.3em;
+    border-radius: 2px;
+    background-color: #fafafa;
+    text-transform: uppercase;
+}
+/* .linkBtn :hover{
+  
+} */

@@ -18,11 +18,28 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import PropTypes from 'prop-types';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Slide from '@material-ui/core/Slide';
-
-
+import Link from '@material-ui/core/Link';
+import styles from './NavBar.module.css'
 
   
 const useStyles = makeStyles((theme) => ({
+  theme:{
+    primary: 'red',
+  },
+  palette: {
+    primary: 'yellow',
+    secondary: 'red',
+  },
+    appBar:{
+      background:'#3FB599',
+    },
+    linkBtn:{
+      padding:  theme.spacing(1, 2),
+      fontSize: '1.3em',
+      borderRadius: '2px',
+      backgroundColor: '#fafafa',
+      textTransform: 'uppercase',
+    },
     grow: {
       flexGrow: 1,
     },
@@ -191,7 +208,7 @@ const useStyles = makeStyles((theme) => ({
         <React.Fragment>
             <CssBaseline />
             <HideOnScroll {...props}>
-            <AppBar>
+            <AppBar className={classes.appBar}>
             <Toolbar>
                 <IconButton
                 edge="start"
@@ -216,6 +233,11 @@ const useStyles = makeStyles((theme) => ({
                     }}
                     inputProps={{ 'aria-label': 'search' }}
                 />
+                </div>
+                <div className={styles.links}>
+                  <Link underline='none' color='primary' className={classes.linkBtn} href="#">
+                      about
+                  </Link>
                 </div>
                 <div className={classes.grow} />
                 <div className={classes.sectionDesktop}>

@@ -7,7 +7,10 @@
     margin: 0 2% !important;
     /* padding-bottom: 10px; */
 }
-
+.cardHeader{
+    font-size: 40px;
+    text-transform: uppercase;
+}
 .infected{
     border-bottom:10px solid #e49707;
 }
