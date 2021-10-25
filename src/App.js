@@ -28,7 +28,7 @@ class App extends React.Component {
     const { data, country } = this.state;
     return (
       <div className={styles.container}>
-        <NavBar/>
+        {/* <NavBar/> */}
         <CountryPicker handleCountryChange={this.handleCountryChange}/>
         <Cards data={data}/>
         <Chart  data={data} country={country}/>

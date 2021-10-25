@@ -57,7 +57,13 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) =>{
                         </Box>
                             <Avatar  className={classes.large} alt="Infected Icon" src={recoveredIco}/>
                         </Box>
-    <Typography variant="h5"> <CountUp start={0} end={recovered.value} duration={2.5} seperator=","/></Typography>
+                        <Typography variant="h5"> 
+                            {recovered.value>0 ? (
+                                <CountUp start={0} end={recovered.value} duration={2.5} seperator=","/>
+                            ) : (
+                            <Typography variant="body2" className={styles.warning}>Unable to fetch data from the API !</Typography>
+                            )}
+                        </Typography>
                         <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
                         <Typography variant="body2">Number of recoveries from COVID-19</Typography>
                     </CardContent>

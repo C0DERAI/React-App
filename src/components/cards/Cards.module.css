@@ -20,7 +20,9 @@
 .deaths{
     border-bottom:10px solid #bb4c4c;
 }
-
+.warning{
+    color:orangered;
+}
 @media(max-width: 770px){
     .card{
         margin: 2% 0 !important;
